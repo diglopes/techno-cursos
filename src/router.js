@@ -23,7 +23,7 @@ export default new Router({
     {
       path: "/cursos",
       name: "Cursos",
-      component: Contato
+      component: Cursos
     }
   ]
 });

@@ -1,10 +1,17 @@
 <template>
-  <div>Contato</div>
+  <div>
+    <PageLoading v-if="loading" />
+
+    <div v-else-if="api">{{api}}</div>
+  </div>
 </template>
 
 <script>
+import fetchData from "@/mixins/fetchData";
+
 export default {
-  name: "Contato"
+  name: "Contato",
+  mixins: [fetchData]
 };
 </script>
 

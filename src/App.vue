@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TheHeader />
-    <router-view />
+    <router-view class="container" />
   </div>
 </template>
 <script>
@@ -39,5 +39,11 @@ a.router-link-exact-active {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 </style>
