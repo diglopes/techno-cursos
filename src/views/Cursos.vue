@@ -1,8 +1,12 @@
 <template>
   <div>
     <PageLoading v-if="loading" />
-
-    <div v-else-if="api">{{api}}</div>
+    <transition>
+      <div v-if="api">
+        <h1>CURSOS</h1>
+        {{api}}
+      </div>
+    </transition>
   </div>
 </template>
 

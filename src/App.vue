@@ -21,6 +21,10 @@ body {
   color: #234;
 }
 
+img {
+  max-width: 100%;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -45,5 +49,26 @@ a.router-link-exact-active {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.v-enter {
+  opacity: 0;
+  transform: translate3d(-20px, 0, 0);
+}
+
+.v-enter-active {
+  transition: all 0.3s;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 400px);
+  grid-gap: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    display: block;
+  }
 }
 </style>

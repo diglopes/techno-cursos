@@ -2,7 +2,12 @@
   <div>
     <PageLoading v-if="loading" />
 
-    <div v-else-if="api">{{api}}</div>
+    <transition>
+      <div v-if="api">
+        <h1>CONTATO</h1>
+        {{api}}
+      </div>
+    </transition>
   </div>
 </template>
 
