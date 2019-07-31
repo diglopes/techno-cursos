@@ -36,5 +36,5 @@ npx json-server api/api.json
 ```
 
 ```
-npm run server
+npm run serve
 ```
