@@ -30,7 +30,10 @@ import fetchData from "@/mixins/fetchData";
 
 export default {
   name: "Contato",
-  mixins: [fetchData]
+  mixins: [fetchData],
+  created() {
+    this.fetchData("/contato");
+  }
 };
 </script>
 
