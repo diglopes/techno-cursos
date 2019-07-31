@@ -6,10 +6,14 @@ export default {
     };
   },
   methods: {
-    fetchData() {
+    fetchData(param) {
       this.loading = true;
       this.api = null;
-      fetch(`http://localhost:3000/${this.$route.name.toLowerCase()}`)
+      const urlBase = "http://localhost:3000";
+      const urlFetch = param
+        ? `/curso/${param}`
+        : `/${this.$route.name.toLowerCase()}`;
+      fetch(urlBase + urlFetch)
         .then(res => res.json())
         .then(json => {
           setTimeout(() => {
